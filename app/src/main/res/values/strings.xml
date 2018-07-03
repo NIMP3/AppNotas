@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AppNotas</string>
     <string name="subtitle_app">Administra tu rendimiento escolar en un solo lugar</string>
+    
+    <string name="hint_id">Identificación</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="text_button_login">LOGIN</string>
 </resources>

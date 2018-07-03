@@ -7,5 +7,23 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <!--=========================================================================================-->
+    <!-- Style Raised Button-->
+    <style name="RaisedButtonDark" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorIcons</item>
+    </style>
+    
+    <!--=========================================================================================-->
+    <!-- Style Raised Button-->
+    <style name="EditTextWhite" parent="TextAppearance.AppCompat">
+        <item name="textColorHint">@color/colorEditTextWhite</item>
+        <item name="android:textColorPrimary">@color/colorEditTextWhite</item>
+        <item name="colorAccent">@color/colorEditTextWhite</item>
+        <item name="colorControlNormal">@color/colorEditTextWhite</item>
+        <item name="colorControlActivated">@color/colorEditTextWhite</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 
 </resources>
