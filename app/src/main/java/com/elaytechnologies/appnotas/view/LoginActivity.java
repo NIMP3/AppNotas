@@ -3,6 +3,8 @@ package com.elaytechnologies.appnotas.view;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.elaytechnologies.appnotas.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override

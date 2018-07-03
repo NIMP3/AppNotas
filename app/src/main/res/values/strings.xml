@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">AppNotas</string>
-    <string name="subtitle_app">Administra tu rendimiento escolar en un solo lugar</string>
-    
+    <string name="subtitle_app">Administra tu rendimiento escolar \nen un solo lugar</string>
+
     <string name="hint_id">Identificación</string>
     <string name="hint_password">Contraseña</string>
     <string name="text_button_login">LOGIN</string>
+    <string name="title_activity_teacher">TeacherActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
