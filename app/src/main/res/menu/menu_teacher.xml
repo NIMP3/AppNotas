@@ -7,23 +7,23 @@
         <item
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_menu_account"
-            android:title="@string/menuitem_account"/>
+            android:title="@string/menu_item_account"/>
     </group>
 
     <group>
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
-            android:title="@string/menuitem_settings"/>
+            android:title="@string/menu_item_settings"/>
 
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_about"
-            android:title="@string/menuitem_about"/>
+            android:title="@string/menu_item_about"/>
     </group>
 
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_menu_logout"
-        android:title="@string/menuitem_logout" />
+        android:title="@string/menu_item_logout" />
 </menu>
