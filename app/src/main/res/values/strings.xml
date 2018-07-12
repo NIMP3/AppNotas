@@ -25,4 +25,8 @@
 
     <string name="title_subjects_list">Asignaturas</string>
     <string name="text_name_subject">QUIMICA</string>
+
+    <string name="title_grade_list">Grados</string>
+    <string name="text_number_grade">8</string>
+    <string name="text_name_grade">Grado octavo</string>
 </resources>

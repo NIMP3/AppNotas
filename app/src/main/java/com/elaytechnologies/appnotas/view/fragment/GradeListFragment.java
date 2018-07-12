@@ -5,30 +5,28 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
+import android.support.v7.widget.Toolbar;
 
 import com.elaytechnologies.appnotas.R;
-import com.elaytechnologies.appnotas.adapter.SubjectAdapterGridView;
-import com.elaytechnologies.appnotas.model.Subject;
+import com.elaytechnologies.appnotas.adapter.GradeAdapterRecyclerView;
+import com.elaytechnologies.appnotas.model.Grade;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SubjectListFragment extends Fragment {
+public class GradeListFragment extends Fragment {
 
 
-    public SubjectListFragment() {
+    public GradeListFragment() {
         // Required empty public constructor
     }
 
@@ -37,35 +35,31 @@ public class SubjectListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_subject_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_grade_list, container, false);
 
-        showToolbar(getResources().getString(R.string.title_subjects_list),false,getActivity());
+        showToolbar(getResources().getString(R.string.title_grade_list),false, getActivity());
 
-        GridView gridView = view.findViewById(R.id.gridViewSubject);
-        SubjectAdapterGridView adapterGridView = new SubjectAdapterGridView(
-                buildSubjects(),
-                R.layout.cardview_subject,
-                getActivity(),
-                getActivity().getSupportFragmentManager());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewGrade);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-        gridView.setAdapter(adapterGridView);
+        GradeAdapterRecyclerView gradeAdapterRecyclerView = new GradeAdapterRecyclerView(buildGrades(),R.layout.cardview_grade,getContext());
+        recyclerView.setAdapter(gradeAdapterRecyclerView);
 
         return view;
     }
-
     /*----------------------------------------------------------------------------------------------
-    * */
-    private ArrayList<Subject> buildSubjects() {
-        ArrayList<Subject> subjects = new ArrayList<>();
+     * */
+    private ArrayList<Grade> buildGrades() {
+        ArrayList<Grade> grades = new ArrayList<>();
 
-        subjects.add(new Subject(1,"RELIGIÓN","Ciencias exactas", 1,2));
-        subjects.add(new Subject(2,"ESPAÑOL","Literatura", 1,2));
-        subjects.add(new Subject(3,"BIOLOGIA","Ciencias exactas", 1,2));
-        subjects.add(new Subject(4,"GEOGRAFIA","Ciencias exactas", 1,2));
-        subjects.add(new Subject(5,"QUIMICA","Ciencias exactas", 1,2));
-        subjects.add(new Subject(6,"FISICA","Ciencias exactas", 1,2));
+        grades.add(new Grade(1,"GRADO QUINTO",1,"5"));
+        grades.add(new Grade(2,"GRADO SEPTIMO",1,"7"));
+        grades.add(new Grade(3,"GRADO DECIMO",1,"10"));
+        grades.add(new Grade(4,"GRADO ONCE",1,"11"));
 
-        return subjects;
+        return grades;
     }
 
     /*----------------------------------------------------------------------------------------------
@@ -88,5 +82,4 @@ public class SubjectListFragment extends Fragment {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
-
 }

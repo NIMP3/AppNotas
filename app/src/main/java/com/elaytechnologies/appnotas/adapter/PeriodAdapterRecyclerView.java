@@ -90,10 +90,11 @@ public class PeriodAdapterRecyclerView extends RecyclerView.Adapter<PeriodAdapte
     }
 
     /*----------------------------------------------------------------------------------------------
-     * Lanzamos el Fragment para la lista de periodos*/
+     * Lanzamos el Fragment para la lista de asignaturas*/
     public void launchSubjectList() {
         SubjectListFragment subjectListFragment = new SubjectListFragment();
         fragmentManager.beginTransaction()
+                .addToBackStack("Subject List")
                 .replace(R.id.teacher_context, subjectListFragment)
                 .setTransition(FragmentTransaction.TRANSIT_EXIT_MASK)
                 .commit();

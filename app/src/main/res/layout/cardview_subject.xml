@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewSubject"
     android:layout_width="@dimen/cardview_subject_width"
     android:layout_height="@dimen/cardview_subject_height"
     app:cardCornerRadius="5dp"
@@ -28,6 +29,7 @@
             android:padding="8dp"
             android:text="@string/text_name_subject"
             android:textAppearance="@android:style/TextAppearance.Material.Title"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </FrameLayout>
 </android.support.v7.widget.CardView>

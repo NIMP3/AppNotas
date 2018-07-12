@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewGrade"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cardview_period_height"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewNumberGrade"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_gradient_period"
+            android:gravity="center"
+            android:text="@string/text_number_grade"
+            android:textColor="@android:color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <TextView
+            android:id="@+id/textViewNameGrade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:drawableTint="@color/colorEditTextBlack"
+            android:text="@string/text_name_grade"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewNumberGrade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewNumberGrade"
+            app:layout_constraintTop_toTopOf="@+id/textViewNumberGrade" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
