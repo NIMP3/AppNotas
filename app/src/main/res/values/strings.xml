@@ -18,7 +18,11 @@
     <string name="menu_item_settings">Ajustes</string>
     <string name="menu_item_about">Acerca de</string>
     <string name="menu_item_logout">Cerrar Sesión</string>
-    <string name="title_periods_list">Periodos</string>
+
+    <string name="title_periods_list">Periodos Académicos</string>
     <string name="textperiod_card">Primer Periodo</string>
     <string name="textdate_card">20/11/2018</string>
+
+    <string name="title_subjects_list">Asignaturas</string>
+    <string name="text_name_subject">QUIMICA</string>
 </resources>

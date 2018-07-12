@@ -3,19 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.fragment.PeriodsListFragment">
+    android:fitsSystemWindows="true"
+    tools:context=".view.fragment.PeriodListFragment">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPeriod"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvPeriod"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </LinearLayout>
-
+        android:layout_height="match_parent"/>
 
 </android.support.design.widget.CoordinatorLayout>
