@@ -13,4 +13,5 @@
     <color name="colorEditTextBlack">#000000</color>
 
     <color name="colorBackgroundNameSubject">#cf000000</color>
+    <color name="colorBackgroundTextCard">#a4202020</color>
 </resources>

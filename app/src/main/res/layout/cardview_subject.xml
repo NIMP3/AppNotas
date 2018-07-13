@@ -1,35 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardViewSubject"
-    android:layout_width="@dimen/cardview_subject_width"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pictureCard"
+    android:layout_width="match_parent"
     android:layout_height="@dimen/cardview_subject_height"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="5dp">
+    android:elevation="@dimen/cardview_elevation"
+    android:layout_margin="5dp"
+    cardview:cardCornerRadius="@dimen/cardview_corner_radius">
 
-
-    <FrameLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageViewSubject"
+            android:id="@+id/imageViewPictureSubject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/subject_img" />
+            cardview:layout_constraintBottom_toBottomOf="parent"
+            cardview:layout_constraintDimensionRatio="16:9"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintHorizontal_bias="1.0"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toTopOf="parent"
+            cardview:srcCompat="@drawable/subject_img" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorBackgroundTextCard"
+            cardview:layout_constraintBottom_toBottomOf="@+id/imageViewPictureSubject"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toTopOf="@+id/guideline6" />
 
         <TextView
             android:id="@+id/textViewNameSubject"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:background="@color/colorBackgroundNameSubject"
-            android:gravity="center"
-            android:padding="8dp"
             android:text="@string/text_name_subject"
-            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:textColor="@color/colorEditTextWhite"
+            android:textSize="@dimen/textsize_username_card"
+            cardview:layout_constraintEnd_toStartOf="@+id/guideline8"
+            cardview:layout_constraintHorizontal_bias="1.0"
+            cardview:layout_constraintStart_toStartOf="@+id/guideline7"
+            cardview:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            cardview:layout_constraintGuide_percent="0.6" />
+
+        <TextView
+            android:id="@+id/textViewNameGrade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_grade"
+            android:textColor="@color/colorEditTextWhite"
+            cardview:layout_constraintEnd_toStartOf="@+id/guideline8"
+            cardview:layout_constraintStart_toStartOf="@+id/guideline7"
+            cardview:layout_constraintTop_toBottomOf="@+id/textViewNameSubject" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            cardview:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            cardview:layout_constraintGuide_end="16dp" />
+
+        <TextView
+            android:id="@+id/textViewNumberGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circle_grade_number"
+            android:gravity="center"
+            android:text="8"
             android:textColor="@android:color/white"
-            android:textSize="18sp" />
-    </FrameLayout>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            cardview:layout_constraintBottom_toTopOf="@+id/guideline6"
+            cardview:layout_constraintEnd_toStartOf="@+id/guideline8"
+            cardview:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
