@@ -29,4 +29,10 @@
     <string name="title_grade_list">Grados</string>
     <string name="text_number_grade">8</string>
     <string name="text_name_grade">Grado octavo</string>
+    <string name="title_tab_tasks">Actividades</string>
+    <string name="title_tab_students">Estudiantes</string>
+    <string name="title_tab_settings">Configuración</string>
+    <string name="title_tab_performance">Rendimiento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
