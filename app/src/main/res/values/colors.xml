@@ -15,4 +15,5 @@
     <color name="colorBackgroundNameSubject">#cf000000</color>
     <color name="colorBackgroundTextCard">#a4202020</color>
     <color name="colorTintBottomBar">#ffffff</color>
+    <color name="colorBackgroundList">#dcdcdc</color>
 </resources>

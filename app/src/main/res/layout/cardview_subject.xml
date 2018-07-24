@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/cardview_subject_height"
     android:layout_margin="5dp"
-    android:elevation="@dimen/cardview_elevation"
-    cardview:cardCornerRadius="@dimen/cardview_corner_radius">
+    cardview:cardCornerRadius="5dp"
+    cardview:cardElevation="5dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -95,4 +95,5 @@
             cardview:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     </android.support.constraint.ConstraintLayout>
+
 </android.support.v7.widget.CardView>

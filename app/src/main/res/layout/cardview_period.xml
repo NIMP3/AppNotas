@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/cardview_period_height"
     android:layout_margin="5dp"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="5dp">
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp">
 
 
     <FrameLayout
