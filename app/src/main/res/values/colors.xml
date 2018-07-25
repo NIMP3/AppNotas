@@ -16,4 +16,8 @@
     <color name="colorBackgroundTextCard">#a4202020</color>
     <color name="colorTintBottomBar">#ffffff</color>
     <color name="colorBackgroundList">#dcdcdc</color>
+
+    <color name="colorTypeTaskTest">#432a9e</color>
+    <color name="colorTypeTaskWork">#a72f2f</color>
+    <color name="colorTypeTaskExpo">#3dae6a</color>
 </resources>

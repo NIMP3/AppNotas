@@ -41,4 +41,6 @@
     <string name="text_stamp_grade">Grado:</string>
     <string name="text_grade_student">Decimo</string>
     <string name="text_email_student">yovany.dev@gmail.com</string>
+    <string name="textcard_type_task">EXAMEN</string>
+    <string name="textcard_description_task">Evaluará los conocimientos de conjuntos y sus respectivas operaciones (UNION,INTERSECCIÓN, DIFERENCIA…</string>
 </resources>
