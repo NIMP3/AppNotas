@@ -70,8 +70,7 @@ public class TeacherActivity extends AppCompatActivity
     public void launchPeriodsList() {
         PeriodListFragment periodListFragment = new PeriodListFragment();
         getSupportFragmentManager().beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.teacher_context,periodListFragment)
+                .add(R.id.teacher_context,periodListFragment)
                 .setTransition(FragmentTransaction.TRANSIT_EXIT_MASK)
                 .commit();
     }

@@ -48,4 +48,7 @@
     <string name="text_info_performance">Alcanza de 4.6 a 5.0 Máximo nivel esperado sin actividades de recuperación.</string>
     <string name="title_performance_student">Rendimiento del Estudiante</string>
     <string name="title_info_task">Información de la Actividad</string>
+    <string name="text_type_task">Tipo de actividad</string>
+    <string name="text_info_task">Descripción</string>
+    <string name="hint_info_task">Conceptos a evaluar en esta Actividad.</string>
 </resources>
