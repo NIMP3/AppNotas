@@ -1,6 +1,7 @@
 package com.elaytechnologies.appnotas.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.elaytechnologies.appnotas.R;
 import com.elaytechnologies.appnotas.model.Student;
+import com.elaytechnologies.appnotas.view.ContainerStudentActivity;
 
 import java.util.ArrayList;
 
@@ -37,13 +39,23 @@ public class StudentAdapterRecyclerView extends RecyclerView.Adapter<StudentAdap
 
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
-        Student student = students.get(position);
+        final Student student = students.get(position);
 
         holder.textViewId.setText(student.getIdStudent());
         holder.textViewNameStudent.setText(student.getNameStudent());
         holder.textViewSurnameStudent.setText(student.getSurnameStudent());
         holder.textViewGradeStudent.setText(student.getGradeStudent());
         holder.textViewEmailStudent.setText(student.getEmailStudent());
+
+        //Evento OnClick sobre un estudiante = Rendimiento del estudiante seleccionado
+        holder.cardViewStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, ContainerStudentActivity.class);
+                intent.putExtra("student",student.getNameStudent());    //Titulo del nuevo Activity
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override

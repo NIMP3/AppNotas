@@ -26,12 +26,12 @@
             android:name=".view.ContainerActivity"
             android:parentActivityName=".view.TeacherActivity"
             tools:targetApi="jelly_bean">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.TeacherActivity"/>
-
+                android:value=".view.TeacherActivity" />
         </activity>
+        <activity android:name=".view.ContainerTaskActivity" />
+        <activity android:name=".view.ContainerStudentActivity"></activity>
     </application>
 
 </manifest>

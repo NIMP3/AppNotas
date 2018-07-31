@@ -1,6 +1,7 @@
 package com.elaytechnologies.appnotas.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.elaytechnologies.appnotas.R;
 import com.elaytechnologies.appnotas.model.Task;
+import com.elaytechnologies.appnotas.view.ContainerTaskActivity;
 
 import java.util.ArrayList;
 
@@ -35,7 +37,7 @@ public class TaskAdapterRecyclerView extends RecyclerView.Adapter<TaskAdapterRec
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        Task task = tasks.get(position);
+        final Task task = tasks.get(position);
 
         holder.textViewTypeTask.setText(task.getTypeTask());
         holder.textViewDescriptionTaks.setText(task.getDescriptionTask());
@@ -51,6 +53,16 @@ public class TaskAdapterRecyclerView extends RecyclerView.Adapter<TaskAdapterRec
                 holder.textViewStampTask.setBackgroundColor(activity.getResources().getColor(R.color.colorTypeTaskExpo));
                 break;
         }
+
+        //Evento OnClick sobre una Actividad = Descripción detallada de la actividad seleccionada
+        holder.cardViewTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, ContainerTaskActivity.class);
+                intent.putExtra("type",task.getTypeTask()); //Titulo del nuevo Activity
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -43,4 +43,9 @@
     <string name="text_email_student">yovany.dev@gmail.com</string>
     <string name="textcard_type_task">EXAMEN</string>
     <string name="textcard_description_task">Evaluará los conocimientos de conjuntos y sus respectivas operaciones (UNION,INTERSECCIÓN, DIFERENCIA…</string>
+    <string name="text_note">4.8</string>
+    <string name="text_performance">Desempeño Superior</string>
+    <string name="text_info_performance">Alcanza de 4.6 a 5.0 Máximo nivel esperado sin actividades de recuperación.</string>
+    <string name="title_performance_student">Rendimiento del Estudiante</string>
+    <string name="title_info_task">Información de la Actividad</string>
 </resources>
