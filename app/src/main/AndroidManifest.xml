@@ -32,7 +32,9 @@
         </activity>
         <activity android:name=".view.ContainerTaskActivity" />
         <activity android:name=".view.ContainerStudentActivity" />
-        <activity android:name=".view.TaskNewActivity"></activity>
+        <activity android:name=".view.TaskNewActivity" />
+        <activity android:name=".view.TaskQualifyActivity" />
+        <activity android:name=".view.StudentAssistanceActivity"></activity>
     </application>
 
 </manifest>

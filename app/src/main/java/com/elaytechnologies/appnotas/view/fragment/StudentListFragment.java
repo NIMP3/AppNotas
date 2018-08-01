@@ -2,7 +2,9 @@ package com.elaytechnologies.appnotas.view.fragment;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 import com.elaytechnologies.appnotas.R;
 import com.elaytechnologies.appnotas.adapter.StudentAdapterRecyclerView;
 import com.elaytechnologies.appnotas.model.Student;
+import com.elaytechnologies.appnotas.view.StudentAssistanceActivity;
 
 import java.util.ArrayList;
 
@@ -23,6 +26,8 @@ import java.util.ArrayList;
  */
 public class StudentListFragment extends Fragment {
 
+    Activity activity;
+    FloatingActionButton fabCallAssistance;
 
     public StudentListFragment() {
         // Required empty public constructor
@@ -35,7 +40,22 @@ public class StudentListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_student_list, container, false);
 
-        showToolbar(getResources().getString(R.string.title_tab_students),true,getActivity());
+        activity = getActivity();
+        fabCallAssistance = view.findViewById(R.id.fabCallAssistance);
+
+        int key = this.getArguments() != null ? this.getArguments().getInt("key") : 0;
+        if (key == 0) {
+            showToolbar(getResources().getString(R.string.title_tab_students),true,getActivity());
+
+            fabCallAssistance.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(activity, StudentAssistanceActivity.class);
+                    activity.startActivity(intent);
+                }
+            });
+        }
+        else fabCallAssistance.setVisibility(View.GONE);
 
         RecyclerView recyclerViewStudent = view.findViewById(R.id.recyclerViewStudent);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());

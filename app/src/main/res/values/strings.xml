@@ -51,4 +51,5 @@
     <string name="text_type_task">Tipo de actividad</string>
     <string name="text_info_task">Descripción</string>
     <string name="hint_info_task">Conceptos a evaluar en esta Actividad.</string>
+    <string name="title_new_task">Crear Actividad</string>
 </resources>

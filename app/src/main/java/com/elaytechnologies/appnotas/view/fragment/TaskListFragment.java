@@ -2,7 +2,9 @@ package com.elaytechnologies.appnotas.view.fragment;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,14 +17,17 @@ import android.view.ViewGroup;
 import com.elaytechnologies.appnotas.R;
 import com.elaytechnologies.appnotas.adapter.TaskAdapterRecyclerView;
 import com.elaytechnologies.appnotas.model.Task;
+import com.elaytechnologies.appnotas.view.TaskNewActivity;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TaskListFragment extends Fragment {
+public class TaskListFragment extends Fragment implements View.OnClickListener{
 
+    FloatingActionButton fabNewTask;
+    Activity activity;
 
     public TaskListFragment() {
         // Required empty public constructor
@@ -34,10 +39,15 @@ public class TaskListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_task_list, container, false);
+        activity = getActivity();
 
         showToolbar(getResources().getString(R.string.title_tab_tasks), true,getActivity());
 
+        fabNewTask = view.findViewById(R.id.fabNewTask);
         RecyclerView recyclerViewTask = view.findViewById(R.id.recyclerviewTask);
+
+        fabNewTask.setOnClickListener(this);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerViewTask.setLayoutManager(linearLayoutManager);
@@ -72,5 +82,15 @@ public class TaskListFragment extends Fragment {
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.fabNewTask:
+                Intent intent = new Intent(activity, TaskNewActivity.class);
+                activity.startActivity(intent);
+                break;
+        }
     }
 }
