@@ -41,18 +41,18 @@ public class StudentAdapterRecyclerView extends RecyclerView.Adapter<StudentAdap
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
         final Student student = students.get(position);
 
-        holder.textViewId.setText(student.getIdStudent());
-        holder.textViewNameStudent.setText(student.getNameStudent());
-        holder.textViewSurnameStudent.setText(student.getSurnameStudent());
+        holder.textViewId.setText(student.getIdUser());
+        holder.textViewNameStudent.setText(student.getNameUser());
+        holder.textViewSurnameStudent.setText(student.getSurnameUser());
         holder.textViewGradeStudent.setText(student.getGradeStudent());
-        holder.textViewEmailStudent.setText(student.getEmailStudent());
+        holder.textViewEmailStudent.setText(student.getEmailUser());
 
         //Evento OnClick sobre un estudiante = Rendimiento del estudiante seleccionado
         holder.cardViewStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(activity, ContainerStudentActivity.class);
-                intent.putExtra("student",student.getNameStudent());    //Titulo del nuevo Activity
+                intent.putExtra("student",student.getNameUser());    //Titulo del nuevo Activity
                 activity.startActivity(intent);
             }
         });

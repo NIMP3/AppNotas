@@ -62,7 +62,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tvIdStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -73,10 +73,10 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline20"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNameStudent" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/tvNameStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -84,7 +84,7 @@
             android:textColor="@android:color/white"
             android:textSize="36dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintBottom_toTopOf="@+id/tvIdStudent"
             app:layout_constraintEnd_toStartOf="@+id/guideline20"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline21"

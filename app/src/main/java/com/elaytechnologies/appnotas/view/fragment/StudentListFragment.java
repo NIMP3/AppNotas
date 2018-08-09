@@ -73,16 +73,16 @@ public class StudentListFragment extends Fragment {
     private ArrayList<Student> buildStudents() {
         ArrayList<Student> students = new ArrayList<>();
 
-        students.add(new Student(1,"1086434256","Martha Lucia","Suarez Jimenez","10","martha@gmail.com"));
-        students.add(new Student(2,"1085145984","Carlos Joaquin","Ortega Tapia","10","carlosortega@gmail.com"));
-        students.add(new Student(3,"1086233987","Jenny Lizeth","Salazar Ascuntar","10","jennysalazar@gmail.com"));
-        students.add(new Student(4,"1087456097","Nathalia Katherine","Escobar Jimenez","10","nathi@gmail.com"));
-        students.add(new Student(5,"1085234092","Jesus Mateo","Suarez Noguera","10","jesusmat@gmail.com"));
-        students.add(new Student(6,"1086498425","Carlos Efrain","Camues Bacca","10","carloscam@gmail.com"));
-        students.add(new Student(7,"1081099452","Jhoana Marcela","Quintero Suarez","10","jhoanamarce@gmail.com"));
-        students.add(new Student(8,"1079453324","Jessica Jhoana","Ortiz Quiroz","10","jessi@gmail.com"));
-        students.add(new Student(9,"1089456702","Juan Carlos","Orbes Montenegro","10","juanorbes@gmail.com"));
-        students.add(new Student(10,"1086499411","Andres Felipe","Burbano Pantoja","10","andresfelipe@gmail.com"));
+        students.add(new Student(1,"1086434256","Martha Lucia","Suarez Jimenez","avatar.jpg","martha@gmail.com","10", "F"));
+        students.add(new Student(2,"1085145984","Carlos Joaquin","Ortega Tapia","avatar.jpg","carlosortega@gmail.com", "10", "M"));
+        students.add(new Student(3,"1086233987","Jenny Lizeth","Salazar Ascuntar","avatar.jpg","jennysalazar@gmail.com", "10", "F"));
+        students.add(new Student(4,"1087456097","Nathalia Katherine","Escobar Jimenez","avatar.jpg","nathi@gmail.com", "10", "F"));
+        students.add(new Student(5,"1085234092","Jesus Mateo","Suarez Noguera","avatar.jpg","jesusmat@gmail.com", "10", "M"));
+        students.add(new Student(6,"1086498425","Carlos Efrain","Camues Bacca","avatar.jpg","carloscam@gmail.com", "10", "M"));
+        students.add(new Student(7,"1081099452","Jhoana Marcela","Quintero Suarez","avatar.jpg","jhoanamarce@gmail.com", "10", "F"));
+        students.add(new Student(8,"1079453324","Jessica Jhoana","Ortiz Quiroz","avatar.jpg","jessi@gmail.com", "10", "F"));
+        students.add(new Student(9,"1089456702","Juan Carlos","Orbes Montenegro","avatar.jpg","juanorbes@gmail.com", "10", "M"));
+        students.add(new Student(10,"1086499411","Andres Felipe","Burbano Pantoja","avatar.jpg","andresfelipe@gmail.com", "10", "M"));
 
         return students;
     }
