@@ -2,6 +2,11 @@ package com.elaytechnologies.appnotas.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.elaytechnologies.appnotas.R;
 import com.elaytechnologies.appnotas.adapter.StudentAdapterSwipeView;
@@ -20,15 +25,18 @@ public class StudentAssistanceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_assistance);
 
+        showToolbar(getResources().getString(R.string.title_student_assistance),false);
+
         swipePlaceHolderView = findViewById(R.id.svStudentList);
         swipePlaceHolderView.getBuilder()
                 .setDisplayViewCount(3)
                 .setSwipeDecor(new SwipeDecor()
                     .setRelativeScale(0.01f));
 
-
+        int position = 0;
         for (Student student : buildStudents()) {
-            swipePlaceHolderView.addView(new StudentAdapterSwipeView(student,this,swipePlaceHolderView));
+            swipePlaceHolderView.addView(new StudentAdapterSwipeView(student,this,swipePlaceHolderView,position+1));
+            position++;
         }
     }
 
@@ -49,5 +57,26 @@ public class StudentAssistanceActivity extends AppCompatActivity {
         students.add(new Student(9,"1089456702","Juan Carlos","Orbes Montenegro","https://thumbs.dreamstime.com/b/asian-child-boy-student-s-uniform-acting-sawaddee-isolated-mean-hello-background-35224643.jpg","juanorbes@gmail.com", "10", "M"));
 
         return students;
+    }
+
+    /*----------------------------------------------------------------------------------------------
+    Muestra el Toolbar aplicando diferentes caracteristicas
+     */
+    public void showToolbar(String title, Boolean upButton) {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(title);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_student_assistance,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 }

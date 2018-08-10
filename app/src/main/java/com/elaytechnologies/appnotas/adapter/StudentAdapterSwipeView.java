@@ -26,27 +26,35 @@ public class StudentAdapterSwipeView {
     @View(R.id.tvNameStudent) private TextView tvNameStudent;
     @View(R.id.tvIdStudent) private TextView tvIdStudent;
     @View(R.id.tvTypeAssistance) private TextView tvTypeAssistance;
-    @View(R.id.cbStatusAssistance) private TextView cbStatusAssistance;
+    @View(R.id.tvNumberStudent) private TextView tvNumberStudent;
+    //@View(R.id.cbStatusAssistance) private TextView cbStatusAssistance;
 
 
     private Student student;
     //private Assistance assistance;
     private Activity activity;
     private SwipePlaceHolderView swipePlaceHolderView;
+    private int position;
 
-    public StudentAdapterSwipeView(Student student, Activity activity, SwipePlaceHolderView swipePlaceHolderView) {
+    public StudentAdapterSwipeView(Student student, Activity activity, SwipePlaceHolderView swipePlaceHolderView, int position) {
         this.student = student;
         this.activity = activity;
         this.swipePlaceHolderView = swipePlaceHolderView;
+        this.position = position;
     }
 
     @Resolve
     private void onResolve() {
-        Log.e("STUDENT",""+student.getAvatarUser());
+        Log.e("STUDENT",""+student.getNameUser());
 
-        Picasso.get().load(student.getAvatarUser()).into(ivPictureStudent);
+        Picasso.get()
+                .load(student.getAvatarUser())
+                .error(R.drawable.img_student_boy)
+                .into(ivPictureStudent);
+
         tvNameStudent.setText(student.getNameUser());
         tvIdStudent.setText(student.getIdUser());
+        tvNumberStudent.setText(String.valueOf(position));
     }
 
     @SwipeOut private void onSwipeOut() {swipePlaceHolderView.addView(this);}

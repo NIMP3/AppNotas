@@ -1,72 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="40dp"
-    android:orientation="vertical">
+    android:layout_margin="16dp"
+    app:cardElevation="4dp">
 
-
-    <android.support.v7.widget.CardView
-        android:orientation="vertical"
-        android:background="@android:color/white"
+    <ImageView
+        android:id="@+id/ivPictureStudent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="4dp">
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="100dp"
+        app:srcCompat="@drawable/img_student_boy" />
 
-        <ImageView
-            android:id="@+id/ivPictureStudent"
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:button="@drawable/assistance_status_selector"
+        android:layout_gravity="bottom|end"/>
+
+    <TextView
+        android:id="@+id/tvNumberStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_grade_number"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="50"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/tvNameStudent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="80dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/student_img" />
-
-        <CheckBox
-            android:id="@+id/cbStatusAssistance"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:button="@drawable/assistance_status_selector" />
+            android:text="@string/text_name_student"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <LinearLayout
+        <View
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="vertical"
-            android:layout_gravity="bottom"
-            android:gravity="center|left"
-            android:paddingLeft="20dp">
+            android:layout_height="1dp"
+            android:background="@color/colorDivider" />
 
-            <TextView
-                android:id="@+id/tvNameStudent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_name_student"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvIdStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_id_student"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/tvIdStudent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_id_student"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14dp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvTypeAssistance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Asistió"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14dp"
-                android:textStyle="normal" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</android.support.design.widget.CoordinatorLayout>
+        <TextView
+            android:id="@+id/tvTypeAssistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_type_assistance" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
