@@ -3,6 +3,7 @@ package com.elaytechnologies.appnotas.adapter;
 import android.app.Activity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import com.elaytechnologies.appnotas.R;
@@ -20,14 +21,14 @@ import com.squareup.picasso.Picasso;
 
 @Layout(R.layout.cardview_student_assistance)
 
-public class StudentAdapterSwipeView {
+public class StudentAssistanceAdapterSwipeView {
 
     @View(R.id.ivPictureStudent) private ImageView ivPictureStudent;
     @View(R.id.tvNameStudent) private TextView tvNameStudent;
     @View(R.id.tvIdStudent) private TextView tvIdStudent;
     @View(R.id.tvTypeAssistance) private TextView tvTypeAssistance;
     @View(R.id.tvNumberStudent) private TextView tvNumberStudent;
-    //@View(R.id.cbStatusAssistance) private TextView cbStatusAssistance;
+    @View(R.id.cbStatusAssistance) private TextView cbStatusAssistance;
 
 
     private Student student;
@@ -36,7 +37,7 @@ public class StudentAdapterSwipeView {
     private SwipePlaceHolderView swipePlaceHolderView;
     private int position;
 
-    public StudentAdapterSwipeView(Student student, Activity activity, SwipePlaceHolderView swipePlaceHolderView, int position) {
+    public StudentAssistanceAdapterSwipeView(Student student, Activity activity, SwipePlaceHolderView swipePlaceHolderView, int position) {
         this.student = student;
         this.activity = activity;
         this.swipePlaceHolderView = swipePlaceHolderView;
@@ -45,8 +46,6 @@ public class StudentAdapterSwipeView {
 
     @Resolve
     private void onResolve() {
-        Log.e("STUDENT",""+student.getNameUser());
-
         Picasso.get()
                 .load(student.getAvatarUser())
                 .error(R.drawable.img_student_boy)
@@ -54,6 +53,7 @@ public class StudentAdapterSwipeView {
 
         tvNameStudent.setText(student.getNameUser());
         tvIdStudent.setText(student.getIdUser());
+
         tvNumberStudent.setText(String.valueOf(position));
     }
 

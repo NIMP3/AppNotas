@@ -54,4 +54,6 @@
     <string name="title_new_task">Crear Actividad</string>
     <string name="text_type_assistance">NO ASISTIÓ - (TIENE EXCUSA)</string>
     <string name="title_student_assistance">Control de asistencia</string>
+    <string name="title_task_qualify">Calificar actividad</string>
+    <string name="text_note_value">0.0</string>
 </resources>

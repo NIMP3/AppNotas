@@ -3,13 +3,11 @@ package com.elaytechnologies.appnotas.view;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.elaytechnologies.appnotas.R;
-import com.elaytechnologies.appnotas.adapter.StudentAdapterSwipeView;
+import com.elaytechnologies.appnotas.adapter.StudentAssistanceAdapterSwipeView;
 import com.elaytechnologies.appnotas.model.Student;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -27,7 +25,7 @@ public class StudentAssistanceActivity extends AppCompatActivity {
 
         showToolbar(getResources().getString(R.string.title_student_assistance),false);
 
-        swipePlaceHolderView = findViewById(R.id.svStudentList);
+        swipePlaceHolderView = findViewById(R.id.svStudentAssistanceList);
         swipePlaceHolderView.getBuilder()
                 .setDisplayViewCount(3)
                 .setSwipeDecor(new SwipeDecor()
@@ -35,7 +33,7 @@ public class StudentAssistanceActivity extends AppCompatActivity {
 
         int position = 0;
         for (Student student : buildStudents()) {
-            swipePlaceHolderView.addView(new StudentAdapterSwipeView(student,this,swipePlaceHolderView,position+1));
+            swipePlaceHolderView.addView(new StudentAssistanceAdapterSwipeView(student,this,swipePlaceHolderView,position+1));
             position++;
         }
     }
