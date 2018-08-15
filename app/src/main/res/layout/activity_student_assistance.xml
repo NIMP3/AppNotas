@@ -8,8 +8,8 @@
 
     <include layout="@layout/actionbar_toolbar"/>
 
-    <com.mindorks.placeholderview.SwipePlaceHolderView
-        android:id="@+id/svStudentAssistanceList"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvStudentAssistanceList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />

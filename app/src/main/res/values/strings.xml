@@ -56,4 +56,7 @@
     <string name="title_student_assistance">Control de asistencia</string>
     <string name="title_task_qualify">Calificar actividad</string>
     <string name="text_note_value">0.0</string>
+    <string name="text_lack">No asistió</string>
+    <string name="text_lack_excuse">Tiene Excusa</string>
+    <string name="text_assistance">Asistió</string>
 </resources>
